@@ -16,18 +16,12 @@ while (isNaN(base) || isNaN(altura)) {
   var altura = Number(prompt("Escribe la altura de un rectangulo"));
 }
 
-for (i = 0; i < base; i++) {
-  document.write("*");
+document.write("*".repeat(base) + "<br>");
+
+for (let i = 0; i < altura - 2; i++) {
+  document.write("*" + "&nbsp;&nbsp".repeat(base - 2) + "*" + "<br>");
 }
 
-document.write("<br>");
-
-for (i = 0; i < altura; i++) {
-  if (i == 0 || i == altura - 1) {
-    document.write("*");
-  }
-  if (i == altura - 1) {
-    break;
-  }
-  document.write("_");
+if (altura > 1) {
+  document.write("*".repeat(base));
 }
